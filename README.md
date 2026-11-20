@@ -24,10 +24,12 @@ The material includes notebooks on distance measures, classification metrics, an
 | Area | Contents |
 | :--- | :--- |
 | [Core notebooks](notebooks) | Cosine distance, distance measures, and classification metrics |
-| [Bank marketing project](final_job) | Exploratory and modeling notebooks using a bank marketing dataset |
-| [ENEM / Kaggle study](competition-kaggle) | Notebooks and supporting material involving ENEM data |
+| [Bank marketing project](final_job/README.md) | Exploratory and modeling notebooks using a bank marketing dataset |
+| [ENEM / Kaggle study](competition-kaggle/README.md) | Notebooks and supporting material involving ENEM data |
 | [Exercise lists](exercise_lists) | Course assignments and exercises |
 | [Presentation notebook](presentation.ipynb) | Additional academic notebook |
+
+| [Data reference](datasets/README.md) | Existing datasets, media assets, and reuse considerations |
 
 ## Featured notebooks
 
