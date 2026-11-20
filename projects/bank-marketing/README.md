@@ -16,4 +16,4 @@ This folder preserves the original academic version sequence. No performance cla
 
 The notebooks may use relative dataset paths; run them from the appropriate working directory and review their cells before execution.
 
-[Back to the repository](../README.md)
+[Back to the repository](../../README.md)

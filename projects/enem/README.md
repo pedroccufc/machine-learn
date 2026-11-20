@@ -10,4 +10,4 @@ This directory contains an ENEM notebook, supporting training/test CSVs, and dat
 
 No specific competition ranking, score, or award is claimed. Verify dataset provenance, usage restrictions, and notebook dependencies before reuse.
 
-[Back to the repository](../README.md)
+[Back to the repository](../../README.md)

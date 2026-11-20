@@ -2,61 +2,63 @@
 
 # Machine Learning · Academic Portfolio
 
-**Exploratory data analysis · Predictive modeling · Model evaluation**
+**Academic projects · Exercises · Jupyter notebooks · Data exploration**
 
-A collection of academic notebooks, exercises, and experiments from my Machine Learning studies.
+A curated archive of coursework and learning experiments from my Computer Science studies. These notebooks document exploration and learning, not production-ready models.
 
 [![Jupyter](https://img.shields.io/badge/Jupyter-Notebooks-F37626?style=flat-square&logo=jupyter&logoColor=white)](notebooks)
-[![Python](https://img.shields.io/badge/Python-Projects-3776AB?style=flat-square&logo=python&logoColor=white)](.)
+[![Python](https://img.shields.io/badge/Python-Studies-3776AB?style=flat-square&logo=python&logoColor=white)](.)
 
 </div>
 
 ---
 
-## Overview
+## Repository structure
 
-This repository brings together **coursework and learning experiments** on Machine Learning and data analysis. It reflects an earlier stage of my technical journey and is preserved as an academic portfolio.
-
-The material includes notebooks on distance measures, classification metrics, and applied data analysis. **These are studies, not production-ready models.**
-
-## Explore the repository
-
-| Area | Contents |
-| :--- | :--- |
-| [Core notebooks](notebooks) | Cosine distance, distance measures, and classification metrics |
-| [Bank marketing project](final_job/README.md) | Exploratory and modeling notebooks using a bank marketing dataset |
-| [ENEM / Kaggle study](competition-kaggle/README.md) | Notebooks and supporting material involving ENEM data |
-| [Exercise lists](exercise_lists) | Course assignments and exercises |
-| [Presentation notebook](presentation.ipynb) | Additional academic notebook |
-
-| [Data reference](datasets/README.md) | Existing datasets, media assets, and reuse considerations |
-
-## Maintenance & reproducibility
-
-See the [maintenance notes](docs/MAINTENANCE.md) for dataset inventory, notebook compatibility considerations, and a safe modernization plan. The original academic files remain in place.
-
-## Featured notebooks
-
-- **[Classification metrics](notebooks/metrics-to-classification.ipynb)** — practical exploration of evaluation metrics.
-- **[Cosine distance](notebooks/Distancia_Cosseno.ipynb)** — study of vector similarity.
-- **[Distance measures](notebooks/Medidas_de_Distancia.ipynb)** — comparison and exploration of distance functions.
-- **[Bank marketing](final_job/bank_marketing.ipynb)** — an applied dataset-based notebook.
-- **[ENEM](competition-kaggle/ENEM.ipynb)** — an exploratory academic notebook.
-
-## Viewing the work
-
-GitHub can render many Jupyter notebooks directly. Open the links above to browse the notebooks, or clone the repository to explore them locally:
-
-```bash
-git clone https://github.com/pedroccufc/machine-learn.git
-cd machine-learn
+```text
+machine-learn/
+├── projects/
+│   ├── bank-marketing/         # Academic project, notebooks and CSV
+│   └── enem/                   # ENEM study, notebook, CSVs and dictionaries
+├── exercises/                  # Course assignments
+├── notebooks/                  # Foundational studies and presentation
+├── datasets/                   # Shared reference data and media
+├── docs/
+│   └── MAINTENANCE.md          # Reproducibility notes
+├── scripts/
+│   └── validate_repository.py  # Static repository checks
+└── .github/workflows/          # Automated static checks
 ```
 
-Execution requirements may vary by notebook. Some exercises use datasets stored in this repository.
+## Explore
 
-## Scope and attribution
+| Category | Material |
+| :--- | :--- |
+| [Bank Marketing](projects/bank-marketing/README.md) | Coursework, historical notebook versions, input CSV |
+| [ENEM](projects/enem/README.md) | ENEM study notebook, inputs, dictionaries |
+| [Course exercises](exercises) | Lists 07–12, classification and modeling exercises |
+| [Concept notebooks](notebooks) | Distance measures, cosine similarity, classification metrics |
+| [Reference datasets](datasets/README.md) | Shared data and auxiliary media |
+| [Maintenance guide](docs/MAINTENANCE.md) | Compatibility, dataset notes and reproducibility |
 
-This repository contains historical academic material. Individual notebooks and datasets may have different origins or dependencies; consult each notebook before reusing material. No specific model performance or production deployment is claimed here.
+## Selected notebooks
+
+- [Classification metrics](notebooks/metrics-to-classification.ipynb)
+- [Cosine distance](notebooks/Distancia_Cosseno.ipynb)
+- [Distance measures](notebooks/Medidas_de_Distancia.ipynb)
+- [Bank marketing](projects/bank-marketing/bank_marketing.ipynb)
+- [ENEM](projects/enem/ENEM.ipynb)
+- [Presentation](notebooks/presentation.ipynb)
+
+## Reproducibility
+
+The notebook files and data are preserved, with historical outputs untouched. Relative paths typically assume the notebook's own directory as working directory. Execute individual notebooks in isolated environments and verify dependencies before running.
+
+The [automated checks](scripts/validate_repository.py) verify **file structure, notebook JSON and selected input-path references**. They do not execute notebook cells, install historical ML libraries or validate model performance.
+
+## Academic context
+
+This portfolio preserves historical coursework. Some material may follow third-party exercises or contain externally sourced datasets; consult the individual assignments and verify dataset licenses before reuse.
 
 ---
 

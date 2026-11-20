@@ -1,17 +1,17 @@
 # Maintenance and reproducibility notes
 
-This repository is a **historical academic archive**, not a production ML codebase. Its existing notebooks and datasets have been kept in their original locations to avoid breaking paths and changing previously recorded coursework.
+This repository is a **historical academic archive**, not a production ML codebase. Its existing notebooks and datasets have been reorganized by purpose while preserving notebook cell outputs and keeping project inputs alongside their notebooks.
 
 ## Current organization
 
 | Path | Material |
 | :--- | :--- |
 | `notebooks/` | Distance measures and classification evaluation |
-| `exercise_lists/` | Coursework and practice notebooks |
-| `final_job/` | Bank marketing notebooks, dataset and version history |
-| `competition-kaggle/` | ENEM notebook and supporting materials |
+| `exercises/` | Coursework and practice notebooks |
+| `projects/bank-marketing/` | Bank marketing notebooks, dataset and version history |
+| `projects/enem/` | ENEM notebook and supporting materials |
 | `datasets/` | Datasets and an auxiliary media file |
-| `presentation.ipynb` | Presentation notebook |
+| `notebooks/presentation.ipynb` | Presentation notebook |
 
 ## Reproducibility
 
@@ -25,10 +25,10 @@ This repository is a **historical academic archive**, not a production ML codeba
 
 - `datasets/movie_data.csv` is approximately **65.9 MB**.
 - `datasets/placa-nova-mercosul-tudo-sobre.mp4` is approximately **14.2 MB**.
-- `competition-kaggle/train.csv` is approximately **12 MB**.
-- `final_job/bank-additional-full.csv` is approximately **5.8 MB**.
+- `projects/enem/train.csv` is approximately **12 MB**.
+- `projects/bank-marketing/bank-additional-full.csv` is approximately **5.8 MB**.
 
-These assets remain in place. Before moving or removing them, inspect notebook references, source licenses, and whether each file is required for reproducing the academic work.
+These assets remain tracked in the repository. Before moving or removing them, inspect notebook references, source licenses, and whether each file is required for reproducing the academic work.
 
 ## Recommended future modernization
 
