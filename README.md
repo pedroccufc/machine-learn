@@ -31,6 +31,10 @@ The material includes notebooks on distance measures, classification metrics, an
 
 | [Data reference](datasets/README.md) | Existing datasets, media assets, and reuse considerations |
 
+## Maintenance & reproducibility
+
+See the [maintenance notes](docs/MAINTENANCE.md) for dataset inventory, notebook compatibility considerations, and a safe modernization plan. The original academic files remain in place.
+
 ## Featured notebooks
 
 - **[Classification metrics](notebooks/metrics-to-classification.ipynb)** — practical exploration of evaluation metrics.
