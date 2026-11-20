@@ -1,43 +1,42 @@
-# Maintenance and reproducibility notes
+# Maintenance, Reproducibility and Data Provenance
 
-This repository is a **historical academic archive**, not a production ML codebase. Its existing notebooks and datasets have been reorganized by purpose while preserving notebook cell outputs and keeping project inputs alongside their notebooks.
+This repository is an **academic archive**. The November 2026 refactor standardized names and paths without re-running historic ML experiments.
 
-## Current organization
+## Conventions
 
-| Path | Material |
-| :--- | :--- |
-| `notebooks/` | Distance measures and classification evaluation |
-| `exercises/` | Coursework and practice notebooks |
-| `projects/bank-marketing/` | Bank marketing notebooks, dataset and version history |
-| `projects/enem/` | ENEM notebook and supporting materials |
-| `datasets/` | Datasets and an auxiliary media file |
-| `notebooks/presentation.ipynb` | Presentation notebook |
+- All project, study, and notebook names use `snake_case`.
+- Independent projects live in `projects/<project>/` with their own `notebooks/`, `data/`, documentation and README.
+- Course lists share data in `coursework/data/` and use `coursework/notebooks/`.
+- General concept notebooks live in `studies/notebooks/`.
+- Non-ML reference media is stored separately in `assets/media/`.
+- Source datasets and notebook outputs are not silently regenerated or removed.
+- Each notebook's working directory is its own `notebooks/` folder.
 
-## Reproducibility
+## Historical migrations
 
-- Open each notebook and check imports, Python dependencies, and input paths before running.
-- Execute old notebooks in an isolated Python environment; modern package versions may behave differently.
-- Notebook outputs may reflect the environment and state at the time of the original work, and should not be interpreted as freshly reproduced results.
-- The repository does not currently contain a verified, shared dependency lockfile for every notebook.
-- Jupyter-generated `.ipynb_checkpoints` entries were removed; the original notebooks remain.
+| Old location | New location |
+| --- | --- |
+| `final_job/` | `projects/bank_marketing/` |
+| `competition-kaggle/` | `projects/enem/` |
+| `exercise_lists/`, `exercises/` | `coursework/notebooks/` |
+| `datasets/` | `coursework/data/` |
+| `notebooks/` | `studies/notebooks/` |
 
-## Larger assets
+Some source files have been renamed. Git preserves their original versions in the commit history.
 
-- `datasets/movie_data.csv` is approximately **65.9 MB**.
-- `datasets/placa-nova-mercosul-tudo-sobre.mp4` is approximately **14.2 MB**.
-- `projects/enem/train.csv` is approximately **12 MB**.
-- `projects/bank-marketing/bank-additional-full.csv` is approximately **5.8 MB**.
+## Files with special considerations
 
-These assets remain tracked in the repository. Before moving or removing them, inspect notebook references, source licenses, and whether each file is required for reproducing the academic work.
+- `coursework/data/movie_data.csv` is approximately 65.9 MB.
+- `assets/media/mercosul_license_plate.mp4` is approximately 14.2 MB, and is not a training dataset.
+- `projects/enem/data/train.csv` is approximately 12 MB.
+- `projects/bank_marketing/data/bank_marketing.csv` is approximately 5.8 MB.
 
-## Recommended future modernization
+No legal rights are inferred from the fact that these files were historically committed. Check their provenance and licenses before redistribution.
 
-1. Audit notebook imports and file dependencies.
-2. Create reproducible, **per-project** dependency specifications after verifying package compatibility.
-3. Separate stable datasets from generated model outputs where appropriate.
-4. Refactor notebooks into scripts only if that improves reuse and retains their educational value.
-5. Add execution tests and sample data to selected projects, without inventing performance results.
+## Validation and limitations
 
-This document is an inventory and maintenance guide, **not a claim that all notebooks have been executed or validated**.
+Run `python scripts/validate_repository.py` or inspect the GitHub Actions checks. The standard-library script parses every notebook and checks expected source/data files and selected relative input paths. It **does not execute notebook cells** or claim modern Python, scikit-learn, or pandas compatibility.
 
-[Back to the repository](../README.md)
+If you later modernize notebooks, introduce versioned per-project environment specifications, write small repeatable smoke tests, and document new experiments separately from historical results.
+
+[Return to main README](../README.md)

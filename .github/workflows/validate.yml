@@ -1,0 +1,33 @@
+name: Validate academic archive
+
+on:
+  push:
+    paths:
+      - "projects/**"
+      - "coursework/**"
+      - "studies/**"
+      - "assets/**"
+      - "scripts/**"
+      - ".github/workflows/validate.yml"
+  pull_request:
+    paths:
+      - "projects/**"
+      - "coursework/**"
+      - "studies/**"
+      - "assets/**"
+      - "scripts/**"
+      - ".github/workflows/validate.yml"
+  workflow_dispatch:
+
+jobs:
+  static-notebook-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Validate structure, notebooks and local data links
+        run: python scripts/validate_repository.py

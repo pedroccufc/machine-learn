@@ -1,13 +1,22 @@
-# ENEM · Competition and academic study
+# ENEM — Academic Data Study
 
-This directory contains an ENEM notebook, supporting training/test CSVs, and data dictionaries.
+A historical notebook with training and test data and a dictionary of fields.
 
-## Files
+```text
+enem/
+├── notebooks/
+│   └── enem_analysis.ipynb
+├── data/
+│   ├── train.csv
+│   └── test.csv
+├── docs/
+│   ├── enem_2016_dictionary.ods
+│   └── enem_2016_dictionary.xlsx
+└── README.md
+```
 
-- [ENEM.ipynb](ENEM.ipynb) — academic notebook.
-- `train.csv` and `test.csv` — datasets used in experimentation.
-- `Dicionаrio_Microdados_Enem_2016.ods` and `Dicionаrio_Microdados_Enem_2016.xlsx` — supporting data dictionaries.
+The notebook references `../data/train.csv` when run from the `notebooks/` directory. Verify source permissions and the data dictionary before reuse.
 
-No specific competition ranking, score, or award is claimed. Verify dataset provenance, usage restrictions, and notebook dependencies before reuse.
+No external competition ranking or evaluation result is claimed.
 
-[Back to the repository](../../README.md)
+[Back to repository](../../README.md)
