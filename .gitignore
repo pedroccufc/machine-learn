@@ -1,0 +1,21 @@
+# Jupyter and Python caches
+**/.ipynb_checkpoints/
+**/__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Local Python environments
+.venv/
+venv/
+env/
+
+# Generated outputs (not source datasets)
+outputs/
+reports/generated/
+
+# Local tooling
+.DS_Store
+.idea/
+.vscode/
